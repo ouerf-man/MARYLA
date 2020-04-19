@@ -1,5 +1,5 @@
 import React from "react"
-import { View, StyleSheet, Dimensions, Text } from "react-native"
+import { View, StyleSheet, Dimensions, Text, Alert } from "react-native"
 import { Icon, Input, Button } from "react-native-elements"
 import { createStackNavigator } from "@react-navigation/stack"
 import firestore from "@react-native-firebase/firestore"
@@ -64,14 +64,14 @@ class SellForm extends React.Component {
          dateReAchay=this.state.person.dateReBuy
         }
         firestore()
-            .collection('persons')
+            .collection('people')
             .doc(this.state.id)
             .update({
                 count: newCount,
-                dataBuy : dataAchat,
+                dateBuy : dataAchat,
                 dateReBuy: dataAchat
             })
-            .then(() => this.setState({ loading: false }))
+            .then(() => this.props.navigation.navigate("Cin"))
             .catch(err => { Alert.alert('erreur', err.message) })
 
     }
@@ -104,6 +104,7 @@ class SellForm extends React.Component {
 
     render() {
         let date = new Date();
+        let his = new Date(this.state.person.dateReBuy)
         return (
             <>
                 <Header head={this.props.route.params.cin}/>
@@ -130,7 +131,7 @@ class SellForm extends React.Component {
                         </Text>
                         <Text style={{marginLeft:20,fontSize:15}}>
                             {
-                                this.state.person.count>=1 ? `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` : this.state.person.dateReBuy
+                                this.state.person.count>=1 ? `${date.getDate()}/${date.getMonth()}/${date.getFullYear()}` : his.getDate()
                             }
                         </Text>
                     </View>
