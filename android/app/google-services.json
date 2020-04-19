@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "986773745615",
+    "firebase_url": "https://bavette-plus.firebaseio.com",
+    "project_id": "bavette-plus",
+    "storage_bucket": "bavette-plus.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:986773745615:android:b718f7dd57700a0b072cba",
+        "android_client_info": {
+          "package_name": "com.hackathongmc"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "986773745615-9d3tqo4mqtg2r20gbas8lk51odsk23kh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrM6MccOB_kSZ2E3rFldRfEBLzDEq2Xq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "986773745615-9d3tqo4mqtg2r20gbas8lk51odsk23kh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
